@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #671ed4f0, #eb7e7e, #4e093a);
+  padding: 10px;
+  max-width: 1540px;
+  margin: 0 auto;
+}
+
+.todo-app h2 {
+  font-family: "Rubik Doodle Shadow", system-ui;
+  font-weight: 600;
+  font-size: xx-large;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.todo-app {
+  width: 100%;
+  max-width: 540px;
+  background: #83aef6;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-app img {
+  height: 40px;
+  width: 48px;
+  margin-left: 10px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #edeef0;
+  padding-left: 20px;
+  border-radius: 30px;
+  margin-bottom: 25px;
+}
+
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  font-weight: 14px;
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  background: #f14f4a;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 40px;
+}
+
+ul li {
+  list-style: none;
+  font-size: 17px;
+  padding-bottom: 30px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li textarea {
+  margin-top: 10px;
+  resize: none;
+  background-color: #83aef6;
+  border: none;
+  font-size: medium;
+  font-family: 'Times New Roman', Times, serif;
+  left: 0;
+}
+
+.checked {
+  background-image: url(./tik.png);
+  height: 55%;
+  width: 7%;
+  top: 5px;
+  text-decoration: line-through;
+  color: #f14f4a;
+}
+
+ul li.checked textarea {
+  text-decoration: line-through;
+  color: #f14f4a;
+}
+
+ul li img {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn img:hover {
+  background: #edeef0;
+  border-radius: 20%;
+}
+
+span.delete-button,
+span.edit-button {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.modal {
+  text-align: center;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  width: 30%;
+  height: 100%;
+  overflow: auto;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: linear-gradient(135deg, #671ed4f0, #eb7e7e, #4e093a);
+  ;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+@media (max-width: 399px) {
+  button{
+    padding: 18px 9%;
+  }
+  .row{
+    margin-left: 0%;
+    flex-direction: column;
+    align-items: stretch;
+    padding-left: 0;
+  }
+  .todo-app img{
+    height: 28px;
+    width: 39px;
+  }
+}
